@@ -1,0 +1,18 @@
+{
+  "name": "MERN_Heroku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd backend && node server.js\" \"cd frontend && npm start\"",
+    "postinstall": "npm install --prefix server && npm install --prefix frontend",
+    "heroku-postbuild": "npm start && cd frontend && npm run build"
+  },
+  "keywords": [],
+  "author": "Sonu Kumar <Sonuyadav9756@gmail.com> (http://sonukr.me)",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
