@@ -1,0 +1,2 @@
+react: cd frontend && nohup npm start
+express: cd backend && PORT=3001 nohup nodemon server.js
