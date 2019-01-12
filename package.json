@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"cd backend && node server.js\" \"cd frontend && npm start\"",
+    "start": "concurrently \"cd backend && nodemon server.js\" \"cd frontend && npm start\"",
     "postinstall": "npm install --prefix backend && npm install --prefix frontend",
     "heroku-postbuild": "npm start && cd frontend && npm run build"
   },
@@ -13,6 +13,7 @@
   "author": "Sonu Kumar <Sonuyadav9756@gmail.com> (http://sonukr.me)",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9"
   }
 }
